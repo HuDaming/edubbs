@@ -9,6 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'EduBBS') - 学习交流平台</title>
+    <meta name="description" content="@yield('description', '足球训练 学习交流平台')" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">

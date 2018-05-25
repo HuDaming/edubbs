@@ -22,21 +22,18 @@ class SeedRolesAndPermissionsData extends Migration
 
         // 创建权限
         Permission::create(['name' => 'manage_contents']);
-        Permission::create(['name' => 'manage_courses']);
         Permission::create(['name' => 'manage_users']);
         Permission::create(['name' => 'edit_settings']);
 
         // 创建站长角色，并赋予去权限
         $founder = Role::create(['name' => 'Founder']);
         $founder->givePermissionTo('manage_contents');
-        $founder->givePermissionTo('manage_courses');
         $founder->givePermissionTo('manage_users');
         $founder->givePermissionTo('edit_settings');
 
         // 创建管理员角色，并赋予权限
         $maintainer = Role::create(['name' => 'Maintainer']);
         $maintainer->givePermissionTo('manage_contents');
-        $maintainer->givePermissionTo('manage_courses');
     }
 
     /**

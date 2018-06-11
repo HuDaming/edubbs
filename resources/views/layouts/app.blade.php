@@ -8,8 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'EduBBS') - 学习交流平台</title>
-    <meta name="description" content="@yield('description', '足球训练 学习交流平台')" />
+    <title>@yield('title', 'EduBBS') - {{ setting('site_name', '体育运动交流平台') }}</title>
+    <meta name="description" content="@yield('description', setting('seo_description', '体育运动爱好者社区。'))" />
+    <meta name="keyword" content="@yield('keyword', setting('seo_keyword', '体育,运动,社区,论坛'))" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
